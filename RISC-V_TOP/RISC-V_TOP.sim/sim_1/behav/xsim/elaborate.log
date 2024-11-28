@@ -1,0 +1,19 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot TOP_behav xil_defaultlib.TOP xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sh_E' [C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v:56]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sb_E' [C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v:57]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'lh_E' [C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v:58]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'lb_E' [C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v:59]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sh_E' [C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v:65]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'sb_E' [C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v:66]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'lh_E' [C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v:67]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'lb_E' [C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v:68]
+WARNING: [VRFC 10-5021] port 'PCpluse1D_E' is not connected on this instance [C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v:61]
+WARNING: [VRFC 10-3129] assignment to input 'ALUsrc_E' [C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/E_C.v:45]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

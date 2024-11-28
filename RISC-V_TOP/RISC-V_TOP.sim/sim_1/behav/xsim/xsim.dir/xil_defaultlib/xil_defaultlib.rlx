@@ -1,0 +1,26 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/ADDER_E.v,1730619800,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/ALU.v,,ADDER_E,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/ALU.v,1731041732,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/CU.v,,ALU,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/CU.v,1730903731,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/DM.v,,CU,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/DM.v,1730940969,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/D_C.v,,DM,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/D_C.v,1730903336,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/EXTEND.v,,D_C,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/EXTEND.v,1730618266,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/E_C.v,,EXTEND,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/E_C.v,1730904124,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/F_C.v,,E_C,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/F_C.v,1730617807,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/IM.v,,F_C,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/IM.v,1731760349,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/MUX.v,,IM,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/MUX.v,1730617827,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/MUX1.v,,MUX,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/MUX1.v,1730622309,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/MUX_IMM.v,,MUX1,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/MUX_IMM.v,1730619775,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/MUX_SRCBE.v,,MUX_IMM,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/MUX_SRCBE.v,1730619814,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/M_C.v,,MUX_SRCBE,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/M_C.v,1730974083,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/PC.v,,M_C,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/PC.v,1730617843,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/PC_ADDER.v,,PC,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/PC_ADDER.v,1730617910,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/RF.v,,PC_ADDER,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/RF.v,1731037653,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/W_B_C.v,,RF,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v,1730943438,verilog,,,,TOP,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/W_B_C.v,1730942886,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/alu_decoder.v,,W_B_C,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/alu_decoder.v,1730618359,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/main_decoder.v,,alu_decoder,,,,,,,,
+C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/main_decoder.v,1730901394,verilog,,C:/Users/NEEL/Downloads/verilog/risc-v/RISC-V_TOP/RISC-V_TOP.srcs/sources_1/new/TOP.v,,main_decoder,,,,,,,,

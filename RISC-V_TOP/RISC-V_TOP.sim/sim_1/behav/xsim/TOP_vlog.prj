@@ -1,0 +1,29 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../RISC-V_TOP.srcs/sources_1/new/ADDER_E.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/ALU.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/CU.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/DM.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/D_C.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/EXTEND.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/E_C.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/F_C.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/IM.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/MUX.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/MUX1.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/MUX_IMM.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/MUX_SRCBE.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/M_C.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/PC.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/PC_ADDER.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/RF.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/W_B_C.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/alu_decoder.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/main_decoder.v" \
+"../../../../RISC-V_TOP.srcs/sources_1/new/TOP.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
