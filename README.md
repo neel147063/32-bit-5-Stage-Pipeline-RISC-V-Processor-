@@ -31,7 +31,7 @@ The Program Counter holds the address of the current instruction and updates to 
   - `PC_F`: The current program counter value used to fetch the instruction.  
 
 3. **IM (Instruction Memory)**:  
-*(Add image here)*  
+*![IM](https://github.com/user-attachments/assets/b0908b9d-6cdd-4715-a4bc-0a0bb55b5f17)*  
 
 This module stores the instruction set of the processor. Based on the current `PC_F`, it outputs the instruction (`InstrF`) to be executed.  
 - **Inputs:**  
@@ -40,7 +40,7 @@ This module stores the instruction set of the processor. Based on the current `P
   - `InstrF`: The instruction fetched for execution.  
 
 4. **PC_ADDER**:  
-*(Add image here)*  
+*![PC_ADDER](https://github.com/user-attachments/assets/edd22453-3e34-44f1-9761-c5e14a4874bc)*  
 
 This unit computes the next sequential program counter address by adding `1` to the current value of the `PC`.  
 - **Inputs:**  
