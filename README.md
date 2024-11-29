@@ -22,7 +22,7 @@ The MUX selects between the next sequential program counter (`PCPlus1F`) and the
   - `PC_F_next`: The next program counter value.  
 
 2. **PC (Program Counter)**:  
-*(Add image here)*  
+*![PC](https://github.com/user-attachments/assets/0411bda6-c393-4487-90a1-98fd7f8eb827)*  
 
 The Program Counter holds the address of the current instruction and updates to the next instruction address during every clock cycle.  
 - **Inputs:**  
