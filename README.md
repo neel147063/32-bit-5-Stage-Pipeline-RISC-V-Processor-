@@ -296,3 +296,45 @@ The `DM` module is a simple memory block that simulates a data memory for your p
     - If `lb_M` is set, it loads a byte.
     - Otherwise, it reads the full 32-bit data.
 
+---
+
+### Write Back Cycle (`W_B_C`) and Multiplexer (`MUX1`) Modules
+
+---
+
+# Write Back Cycle
+
+The `W_B_C` module is part of the **Writeback** cycle in a pipelined processor. It is responsible for selecting the appropriate result (either from the ALU or memory) and forwarding it to the register file for updating the destination register. This operation is critical for completing the execution of instructions that involve writing results back to registers.
+
+#### **Inputs**:
+- **ResultSrc_W**: Control signal indicating whether the result to be written back comes from the ALU or the memory.
+- **ALUResult_W**: The result from the ALU, which can be written back to the register file.
+- **ReadData_W**: The data read from memory, which can be written back to the register file.
+
+#### **Outputs**:
+- **ResultW**: The final result (either ALU result or memory data) that is written back to the register file.
+
+#### **Functionality**:
+- The `W_B_C` module uses a multiplexer (implemented in the `MUX1` module) to select between the ALU result and the memory data based on the value of `ResultSrc_W`.
+- If `ResultSrc_W` is `1`, the result comes from the memory (i.e., `ReadData_W`).
+- If `ResultSrc_W` is `0`, the result comes from the ALU (i.e., `ALUResult_W`).
+- The selected result (`ResultW`) is forwarded to the register file to be written back into the destination register.
+
+### `MUX1` Module (Multiplexer)
+*![MUX](https://github.com/user-attachments/assets/dcecd4c3-7a5d-4336-a7ce-dac8216ea8a1)* 
+The `MUX1` module is a simple **2-to-1 multiplexer** that selects between two 32-bit inputs based on the `ResultSrc_W` control signal. It is used to choose the result to be written back to the register file in the **Writeback** cycle.
+
+#### **Inputs**:
+- **ResultSrc_W**: Control signal that determines which input to select.
+- **ALUResult_W**: The result from the ALU.
+- **ReadData_W**: The data read from memory.
+
+#### **Outputs**:
+- **ResultW**: The selected result, either from the ALU (`ALUResult_W`) or from memory (`ReadData_W`).
+
+#### **Functionality**:
+- If **ResultSrc_W** is `1`, the multiplexer outputs the value of **ReadData_W** (memory result).
+- If **ResultSrc_W** is `0`, the multiplexer outputs the value of **ALUResult_W** (ALU result).
+- This allows the **Writeback** cycle to select the correct data to be written back to the register file.
+
+---
