@@ -159,10 +159,6 @@ The Immediate Generator extracts and sign-extends the immediate value from the i
 
 ---
 
-Here's the description of inputs, outputs, and signals for each block in the execution cycle based on your provided code:
-
----
-
 ### **Execution Cycle Module (E_C)**
 
 **Inputs:**
