@@ -158,3 +158,112 @@ The Immediate Generator extracts and sign-extends the immediate value from the i
 - The values `Data1`, `Data2`, and `Immediate` are passed to the Execution Cycle for use in the ALU and Memory operations.
 
 ---
+
+Here's the description of inputs, outputs, and signals for each block in the execution cycle based on your provided code:
+
+---
+
+### **Execution Cycle Module (E_C)**
+
+**Inputs:**
+- **clk**: Clock signal to synchronize the operations.
+- **reset**: Reset signal to reset all registers in the cycle.
+- **sh_E, sb_E, lh_E, lb_E**: Store/load signals for different data types (halfword, byte).
+- **regwrite_E**: Control signal for register write in the execution stage.
+- **memwrite_E**: Control signal for memory write in the execution stage.
+- **resultsrc_E**: Signal to select whether the result is from the ALU or memory.
+- **branch_E**: Control signal for branch operation.
+- **jump_E**: Control signal for jump operation.
+- **AUIPC_E**: Control signal for the AUIPC instruction.
+- **ALUsrc_E (2 bits)**: ALU operand selection control.
+- **alu_control_E (6 bits)**: ALU operation control signal.
+- **RD_E (5 bits)**: Destination register (used for memory operations).
+- **RD1_E, RD2_E (32 bits)**: Register data read from registers.
+- **imm_b_j_E, imm_l_i_E, imm_s_E, imm_u_E (32 bits)**: Immediate values for different instruction types.
+- **PCD_E (32 bits)**: Current program counter value in the execution stage.
+- **PCpluse1D_E (32 bits)**: Program counter incremented by 1.
+  
+**Outputs:**
+- **regwrite_M**: Register write control signal passed to the memory stage.
+- **memwrite_M**: Memory write control signal passed to the memory stage.
+- **resultsrc_M**: Result source control signal passed to the memory stage.
+- **PCSrcE**: Program counter source for branching or jumping.
+- **sh_M, sb_M, lh_M, lb_M**: Store/load signals passed to the memory stage.
+- **RD_M (5 bits)**: Destination register for memory operations.
+- **WriteData_M (32 bits)**: Data to be written to memory.
+- **ALUresult_M (32 bits)**: ALU result passed to the memory stage.
+- **PCTargetE (32 bits)**: Target address for branch or jump.
+
+### **MUX_IMM Module**
+*![MUX_IMM](https://github.com/user-attachments/assets/7358009d-6e9c-45ff-bdab-b920264634f4)*  
+**Inputs:**
+- **imm_b_j_E (32 bits)**: Immediate value for branch/jump.
+- **imm_u_E (32 bits)**: Upper immediate value for AUIPC.
+- **AUIPC_E**: Control signal for AUIPC instruction.
+
+**Outputs:**
+- **imm_E (32 bits)**: Selected immediate value based on AUIPC control signal.
+
+### **ADDER_E Module**
+*![ADDER](https://github.com/user-attachments/assets/a1f93322-ec27-41db-a5b9-002040663926)*  
+**Inputs:**
+- **PCD_E (32 bits)**: Program counter value in the execution stage.
+- **imm_E (32 bits)**: Immediate value selected by the MUX_IMM.
+
+**Outputs:**
+- **PCTargetE (32 bits)**: Program counter target address for branch or jump.
+
+### **MUX_SRCBE Module**
+*![srcB](https://github.com/user-attachments/assets/d14d5110-ff8c-44da-9ee3-c20208483b53)*  
+**Inputs:**
+- **RD2_E (32 bits)**: Register data read from register file.
+- **imm_u_E (32 bits)**: Immediate value for U-type instructions.
+- **imm_l_i_E (32 bits)**: Immediate value for I-type instructions.
+- **imm_s_E (32 bits)**: Immediate value for S-type instructions.
+- **ALUsrc_E (2 bits)**: ALU operand selection control signal.
+
+**Outputs:**
+- **srcBE (32 bits)**: Selected source operand for the ALU.
+
+### **ALU Module**
+*![ALU](https://github.com/user-attachments/assets/bec8d05a-83c0-4a8b-a3a1-56771f846210)*  
+**Inputs:**
+- **srcAE (32 bits)**: First operand for ALU (from the register file).
+- **srcBE (32 bits)**: Second operand for ALU (from the selected MUX_SRCBE).
+- **alu_control_E (6 bits)**: ALU control signal to determine the operation.
+
+**Outputs:**
+- **zero_E**: Flag indicating if the ALU result is zero (used for branches).
+- **result_E (32 bits)**: ALU operation result.
+
+### **AND/OR Gate for Branch Control**
+
+**Inputs:**
+- **zero_E**: Zero flag from the ALU.
+- **branch_E**: Branch control signal.
+
+**Outputs:**
+- **PCSrcE**: Control signal for the program counter source (used to choose between next instruction or branch target).
+
+### **Registers for Storing State**
+
+**Registers (for storing the state between cycles):**
+- **regwrite_E_r**: Register to store the regwrite signal.
+- **memwrite_E_r**: Register to store the memwrite signal.
+- **resultsrc_E_r**: Register to store the resultsrc signal.
+- **RD_E_r**: Register to store the destination register.
+- **WriteData_E_r**: Register to store the data to be written to memory.
+- **ALUresult_E_r**: Register to store the ALU result.
+- **sh_E_r, sb_E_r, lh_E_r, lb_E_r**: Registers to store the store/load signals.
+
+### **Final Output Assignments:**
+
+- **regwrite_M**: Passed from `regwrite_E_r`.
+- **memwrite_M**: Passed from `memwrite_E_r`.
+- **resultsrc_M**: Passed from `resultsrc_E_r`.
+- **RD_M**: Passed from `RD_E_r`.
+- **WriteData_M**: Passed from `WriteData_E_r`.
+- **ALUresult_M**: Passed from `ALUresult_E_r`.
+- **sh_M, sb_M, lh_M, lb_M**: Passed from respective registers.
+
+---
