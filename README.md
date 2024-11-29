@@ -13,7 +13,7 @@ The key components of the Fetch Cycle are:
 
 1. **MUX**:  
    ![MUX](https://github.com/user-attachments/assets/389dba73-9498-4050-866c-4ec9f2b6cdce)
-   *The MUX selects between the next sequential program counter (`PCPlus1F`) and the branch target address (`PCTargetE`) based on the control signal `PCSrcE`.*  
+                                                 The MUX selects between the next sequential program counter (`PCPlus1F`) and the branch target address (`PCTargetE`) based on the control signal `PCSrcE`.
    - **Inputs:**  
      - `PCTargetE` and `PCSrcE`: These signals are generated in the Execution Cycle.  
      - `PCPlus1F`: This is generated in the Fetch Cycle itself.  
