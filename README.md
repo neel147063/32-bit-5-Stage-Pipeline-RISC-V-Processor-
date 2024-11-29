@@ -12,7 +12,7 @@ The Fetch Cycle is the first stage of the RISC-V processor pipeline. Its primary
 The key components of the Fetch Cycle are:  
 
 1. **MUX**:  
-   *(Add image here)*  
+   ![MUX](https://github.com/user-attachments/assets/389dba73-9498-4050-866c-4ec9f2b6cdce)
    The MUX selects between the next sequential program counter (`PCPlus1F`) and the branch target address (`PCTargetE`) based on the control signal `PCSrcE`.  
    - **Inputs:**  
      - `PCTargetE` and `PCSrcE`: These signals are generated in the Execution Cycle.  
