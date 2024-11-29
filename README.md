@@ -298,10 +298,6 @@ The `DM` module is a simple memory block that simulates a data memory for your p
 
 ---
 
-### Write Back Cycle (`W_B_C`) and Multiplexer (`MUX1`) Modules
-
----
-
 # Write Back Cycle
 
 The `W_B_C` module is part of the **Writeback** cycle in a pipelined processor. It is responsible for selecting the appropriate result (either from the ALU or memory) and forwarding it to the register file for updating the destination register. This operation is critical for completing the execution of instructions that involve writing results back to registers.
