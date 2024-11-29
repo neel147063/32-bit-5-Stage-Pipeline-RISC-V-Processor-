@@ -159,7 +159,7 @@ The Immediate Generator extracts and sign-extends the immediate value from the i
 
 ---
 
-### **Execution Cycle Module (E_C)**
+# Execution Cycle 
 
 **Inputs:**
 - **clk**: Clock signal to synchronize the operations.
