@@ -76,21 +76,28 @@ The Instruction Register holds the fetched instruction passed from the Fetch Cyc
 *![Screenshot 2024-11-29 132427](https://github.com/user-attachments/assets/4ea58382-8fd2-41bf-abc9-01a8a40d4710)*  
 
 The Control Unit decodes the instruction fields (`InstrD`) and generates control signals that guide the operations in the Execution and Memory cycles.
+
+Here's the description of the **Control Unit (CU)** block in the format you requested:
+
 - **Inputs:**  
-  - `InstrD[6:0]`: Opcode from the instruction.
-  - `InstrD[31:25]`: Funct7 (for R-type instructions).
-  - `InstrD[14:12]`: Funct3 (for specifying instruction subtype).
-  - `InstrD[19:15]`: `rs1` (source register 1).
-  - `InstrD[24:20]`: `rs2` (source register 2).
-  - `InstrD[11:7]`: `rd` (destination register).
+  - `op`: 7-bit opcode of the instruction (`InstrD[6:0]`).
+  - `fun7`: 7-bit function field (`InstrD[31:25]`).
+  - `fun3`: 3-bit function field (`InstrD[14:12]`).
+
 - **Outputs:**  
-  - `ALUSrc`: Control signal for ALU source.
-  - `MemRead`: Control signal for memory read.
-  - `MemWrite`: Control signal for memory write.
-  - `RegWrite`: Control signal for register write.
-  - `MemtoReg`: Control signal for writing memory data to a register.
-  - `Branch`: Control signal for branch instructions.
-  - `ALUOp`: ALU operation control signal.
+  - `alu_control`: 6-bit ALU control signal that determines the operation (addition, subtraction, etc.).
+  - `regwrite`: Control signal to enable or disable writing to a register.
+  - `ALUsrc`: 2-bit signal to select the second operand for the ALU (either a register value or an immediate value).
+  - `memwrite`: Control signal to enable or disable writing to memory.
+  - `resultsrc`: Signal to select the result source (ALU result or memory data).
+  - `branch`: Control signal to indicate whether a branch operation is to be executed.
+  - `jump`: Control signal to indicate whether a jump operation is to be executed.
+  - `immsrc`: 3-bit signal to select the immediate value source for the operation.
+  - `AUIPC`: Signal indicating if the instruction is AUIPC (Add Upper Immediate to PC).
+  - `sh_D`: Control signal indicating if the instruction is a `SH` (store halfword).
+  - `sb_D`: Control signal indicating if the instruction is a `SB` (store byte).
+  - `lh_D`: Control signal indicating if the instruction is a `LH` (load halfword).
+  - `lb_D`: Control signal indicating if the instruction is a `LB` (load byte).
 
 3. **Register File**:  
 *![Screenshot 2024-11-29 132309](https://github.com/user-attachments/assets/4afdf15c-6cbd-4d6e-b031-40d3bce9efef)*  
