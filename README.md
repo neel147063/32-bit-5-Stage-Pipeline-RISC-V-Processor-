@@ -1,4 +1,3 @@
-Here’s the updated README for the **Fetch Cycle**, with the additional details and no code included:  
 
 ---
 
@@ -51,4 +50,3 @@ The key components of the Fetch Cycle are:
 
 ---
 
-Let me know if this structure meets your expectations or if you'd like to modify any section! 😊
