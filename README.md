@@ -300,7 +300,7 @@ The `DM` module is a simple memory block that simulates a data memory for your p
 ---
 
 # Write Back Cycle
-
+*![MUX](https://github.com/user-attachments/assets/dcecd4c3-7a5d-4336-a7ce-dac8216ea8a1)* 
 The `W_B_C` module is part of the **Writeback** cycle in a pipelined processor. It is responsible for selecting the appropriate result (either from the ALU or memory) and forwarding it to the register file for updating the destination register. This operation is critical for completing the execution of instructions that involve writing results back to registers.
 
 #### **Inputs**:
@@ -318,7 +318,7 @@ The `W_B_C` module is part of the **Writeback** cycle in a pipelined processor. 
 - The selected result (`ResultW`) is forwarded to the register file to be written back into the destination register.
 
 ### `MUX1` Module (Multiplexer)
-*![MUX](https://github.com/user-attachments/assets/dcecd4c3-7a5d-4336-a7ce-dac8216ea8a1)* 
+*![image](https://github.com/user-attachments/assets/0feea1ff-31f2-433a-8680-7e7494a519f0)*
 The `MUX1` module is a simple **2-to-1 multiplexer** that selects between two 32-bit inputs based on the `ResultSrc_W` control signal. It is used to choose the result to be written back to the register file in the **Writeback** cycle.
 
 #### **Inputs**:
