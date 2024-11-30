@@ -1,3 +1,86 @@
+### RISC-V 32-bit 5-Stage Pipelined Architecture
+
+#### **Introduction**  
+RISC-V is an open-source instruction set architecture (ISA) designed for flexibility, simplicity, and efficiency. The 32-bit RISC-V ISA supports multiple instruction types, making it suitable for various applications. A 5-stage pipelined architecture enhances instruction throughput by breaking down instruction execution into distinct stages, ensuring efficient parallel processing.
+
+---
+
+### **Instruction Types and Field Addresses**  
+
+1. **R-Type**:  
+   - **Purpose**: Register-to-register operations (e.g., addition, subtraction).  
+   - **Fields**:  
+     - `opcode` (0–6): Specifies the operation type.  
+     - `rd` (7–11): Destination register.  
+     - `funct3` (12–14): Encodes the specific operation within the opcode.  
+     - `rs1` (15–19): First source register.  
+     - `rs2` (20–24): Second source register.  
+     - `funct7` (25–31): Extends operation encoding.
+
+2. **I-Type**:  
+   - **Purpose**: Handles immediate values for arithmetic, logical, and load operations.  
+   - **Fields**:  
+     - `opcode` (0–6): Specifies the operation type.  
+     - `rd` (7–11): Destination register.  
+     - `funct3` (12–14): Encodes the specific operation within the opcode.  
+     - `rs1` (15–19): Source register.  
+     - `imm` (20–31): Immediate value.
+
+3. **S-Type**:  
+   - **Purpose**: Used for store operations.  
+   - **Fields**:  
+     - `opcode` (0–6): Specifies the operation type.  
+     - `imm[11:5]` (7–11, 25–31): Immediate value (split across fields).  
+     - `funct3` (12–14): Encodes the specific operation within the opcode.  
+     - `rs1` (15–19): Base address register.  
+     - `rs2` (20–24): Source register for the value to store.  
+
+4. **B-Type**:  
+   - **Purpose**: Facilitates branch instructions based on conditions.  
+   - **Fields**:  
+     - `opcode` (0–6): Specifies the operation type.  
+     - `imm[12]` (31): Sign bit of immediate value.  
+     - `imm[10:5]` (25–30): Middle bits of the immediate value.  
+     - `funct3` (12–14): Encodes the specific operation within the opcode.  
+     - `rs1` (15–19): First source register.  
+     - `rs2` (20–24): Second source register.  
+     - `imm[4:1]` (8–11), `imm[11]` (7): Remaining immediate bits.
+
+5. **U-Type**:  
+   - **Purpose**: Supports upper immediate values for large constants (e.g., LUI).  
+   - **Fields**:  
+     - `opcode` (0–6): Specifies the operation type.  
+     - `rd` (7–11): Destination register.  
+     - `imm[31:12]` (12–31): Upper immediate value.
+
+6. **J-Type**:  
+   - **Purpose**: Used for jump instructions (e.g., JAL).  
+   - **Fields**:  
+     - `opcode` (0–6): Specifies the operation type.  
+     - `rd` (7–11): Destination register.  
+     - `imm[20]` (31): Sign bit of the immediate value.  
+     - `imm[10:1]` (21–30): Middle bits of the immediate value.  
+     - `imm[11]` (20): Immediate bit.  
+     - `imm[19:12]` (12–19): Upper bits of the immediate value.
+
+---
+
+### **Pipeline Stages**
+
+1. **Instruction Fetch (IF)**:  
+   - Retrieves the next instruction from memory.
+
+2. **Instruction Decode (ID)**:  
+   - Decodes the instruction and fetches operands.
+
+3. **Execution (EX)**:  
+   - Performs the required operation (e.g., arithmetic, logical).
+
+4. **Memory Access (MEM)**:  
+   - Reads from or writes to memory if needed.
+
+5. **Write Back (WB)**:  
+   - Writes the result back to the destination register.
 
 ---
 
