@@ -248,6 +248,7 @@ The Immediate Generator extracts and sign-extends the immediate value from the i
 
 # Memory Cycle
 *![image](https://github.com/user-attachments/assets/027e9a87-2d42-4671-a603-50e016c5c67a)*
+
 The `M_C` module is used to pass control signals and data between the Memory and Writeback stages of a pipelined processor. It interacts with the `DM` module for memory operations. Here's an overview:
 
 - **Inputs**:
