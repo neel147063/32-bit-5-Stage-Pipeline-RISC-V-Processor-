@@ -3,7 +3,7 @@
 #### **Introduction**  
 RISC-V is an open-source instruction set architecture (ISA) designed for flexibility, simplicity, and efficiency. The 32-bit RISC-V ISA supports multiple instruction types, making it suitable for various applications. A 5-stage pipelined architecture enhances instruction throughput by breaking down instruction execution into distinct stages, ensuring efficient parallel processing.
 
----
+--
 
 ### **Instruction Types and Field Addresses**  
 
