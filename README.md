@@ -117,6 +117,10 @@ RISC-V is an open-source instruction set architecture (ISA) designed for flexibi
 
 ---
 
+*![image](https://github.com/user-attachments/assets/5d551ea2-bf34-41a5-b542-7fad25a1c958)*
+
+---
+
 # Fetch Cycle  
 
 ### Block Diagram  
