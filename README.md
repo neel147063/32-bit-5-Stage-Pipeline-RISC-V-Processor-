@@ -105,19 +105,19 @@ RISC-V is an open-source instruction set architecture (ISA) designed for flexibi
 
 ### **Pipeline Stages**
 
-1. **Instruction Fetch (IF)**:  
+1. **Instruction Fetch (FC)**:  
    - Retrieves the next instruction from memory.
 
-2. **Instruction Decode (ID)**:  
+2. **Instruction Decode (DC)**:  
    - Decodes the instruction and fetches operands.
 
-3. **Execution (EX)**:  
+3. **Execution (EC)**:  
    - Performs the required operation (e.g., arithmetic, logical).
 
-4. **Memory Access (MEM)**:  
+4. **Memory Access (MC)**:  
    - Reads from or writes to memory if needed.
 
-5. **Write Back (WB)**:  
+5. **Write Back (WBC)**:  
    - Writes the result back to the destination register.
 
 ---
