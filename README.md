@@ -4,7 +4,7 @@
 # Fetch Cycle  
 
 ### Block Diagram  
-*(Add the block diagram image here)*  
+*![Screenshot 2024-11-30 062808](https://github.com/user-attachments/assets/733bef95-19fb-44a5-b680-a83a6185272e)*  
 
 ### Theory  
 The Fetch Cycle is the first stage of the RISC-V processor pipeline. Its primary function is to retrieve the next instruction from memory and update the program counter (PC). The fetched instruction is passed to the subsequent stages for decoding and execution.  
