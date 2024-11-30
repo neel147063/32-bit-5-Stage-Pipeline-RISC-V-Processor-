@@ -31,7 +31,7 @@ If you're not familiar with the underlying theory, don't worry! Just follow thes
 
 Enjoy exploring the results of your RISC-V processor simulation! 🚀
 
-###**For those who want to dive deeper into the theory behind this project, a detailed explanation is provided below. 📖✨******
+## For those who want to dive deeper into the theory behind this project, a detailed explanation is provided below. 📖✨
 
 ### RISC-V 32-bit 5-Stage Pipelined Architecture
 
