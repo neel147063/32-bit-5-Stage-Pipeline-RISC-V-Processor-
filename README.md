@@ -1,3 +1,38 @@
+### How to Run the Project in Vivado 2023.2 ML Edition 🚀  
+
+If you're not familiar with the underlying theory, don't worry! Just follow these simple steps to run the project and see the results:  
+
+1. **Install Vivado 2023.2 ML Edition** 🖥️  
+   - Ensure you have the software installed on your system to use this project.
+
+2. **Download the Project Files** 📁  
+   - Download the project folder and locate the file named **`RISC-V_TOP.xpr`**.
+
+3. **Open the Project in Vivado** ✨  
+   - Launch **Vivado 2023.2 ML Edition**.  
+   - Click on **Open Project** and select the **`RISC-V_TOP.xpr`** file.
+
+4. **Run the Simulation** 🎬  
+   - Once the project opens, go to **Run Simulation** and choose **Run Behavioral Simulation**.  
+   - Wait for the simulation window to open.
+
+5. **Set Clock and Reset Signals** 🔄  
+   - **For Clock (clk)**:  
+     - Right-click on **clk**, select **Force Clock**, and set up a clock pulse.  
+   - **For Reset (rst)**:  
+     - First, set it to **0** for **100 ns**, and then to **1** for **15000 ns**.
+
+6. **View the Output in the Register File** 📊  
+   - In the **Scope** window:  
+     - Open **D_C** and then **rf**.  
+   - In the **Object** window:  
+     - Expand **reg_mem[31:0][31:0]**.  
+   - Boom! 🎉 You’ll see the output of all instructions in your **Register File (rf)**.  
+
+Enjoy exploring the results of your RISC-V processor simulation! 🚀
+
+###For those who want to dive deeper into the theory behind this project, a detailed explanation is provided below. 📖✨
+
 ### RISC-V 32-bit 5-Stage Pipelined Architecture
 
 #### **Introduction**  
