@@ -98,6 +98,11 @@ RISC-V is an open-source instruction set architecture (ISA) designed for flexibi
      - `imm[11]` (20): Immediate bit.  
      - `imm[19:12]` (12–19): Upper bits of the immediate value.
 
+---
+# RISC-V TOP 32bit RTL design:
+
+*![image](https://github.com/user-attachments/assets/9f9ececa-6b5c-49d7-bec5-0c71605de935)*
+
 ### **Pipeline Stages**
 
 1. **Instruction Fetch (IF)**:  
@@ -114,11 +119,6 @@ RISC-V is an open-source instruction set architecture (ISA) designed for flexibi
 
 5. **Write Back (WB)**:  
    - Writes the result back to the destination register.
-
----
-# RISC-V TOP 32bit RTL design:
-
-*![image](https://github.com/user-attachments/assets/9f9ececa-6b5c-49d7-bec5-0c71605de935)*
 
 ---
 
