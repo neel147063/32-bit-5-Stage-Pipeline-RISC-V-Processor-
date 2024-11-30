@@ -159,7 +159,7 @@ The Immediate Generator extracts and sign-extends the immediate value from the i
 ---
 
 # Execution Cycle 
-
+*![Screenshot 2024-11-30 061335](https://github.com/user-attachments/assets/91915a9f-f10a-4c8f-adb7-6464eb0e5efc)*
 **Inputs:**
 - **clk**: Clock signal to synchronize the operations.
 - **reset**: Reset signal to reset all registers in the cycle.
