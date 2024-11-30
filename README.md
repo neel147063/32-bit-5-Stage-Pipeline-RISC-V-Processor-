@@ -56,9 +56,6 @@ This unit computes the next sequential program counter address by adding `1` to 
 
 # Decoder Cycle  
 
-### Block Diagram  
-*(Add the block diagram image here)*  
-
 ### Theory  
 The Decoder Cycle is the second stage of the RISC-V processor pipeline. Its primary function is to decode the fetched instruction (`InstrD`) and generate control signals for the subsequent stages, including register reads and ALU control. The decoded instruction is used to determine the operation and data required for execution.
 
