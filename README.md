@@ -53,7 +53,7 @@ RISC-V is an open-source instruction set architecture (ISA) designed for flexibi
      - `funct7` (25–31): Extends operation encoding.
 
 2. **I-Type**:  
-   - **Purpose**: Handles immediate values for arithmetic, logical, and load operations.  
+   - **Purpose**: Handles immediate values for arithmetic, logical operations.  
    - **Fields**:  
      - `opcode` (0–6): Specifies the operation type.  
      - `rd` (7–11): Destination register.  
@@ -65,10 +65,19 @@ RISC-V is an open-source instruction set architecture (ISA) designed for flexibi
    - **Purpose**: Used for store operations.  
    - **Fields**:  
      - `opcode` (0–6): Specifies the operation type.  
-     - `imm[11:5]` (7–11, 25–31): Immediate value (split across fields).  
-     - `funct3` (12–14): Encodes the specific operation within the opcode.  
+     - `imm` (7–11, 25–31): Immediate value (split across fields).  
+     - `funct3` (12–14): Encodes the specific operation within the opcode(sw,sh,sb).  
      - `rs1` (15–19): Base address register.  
-     - `rs2` (20–24): Source register for the value to store.  
+     - `rs2` (20–24): Source register for the value to store.
+
+3. **L-Type**:  
+   - **Purpose**: Used for load operations.  
+   - **Fields**:  
+     - `opcode` (0–6): Specifies the operation type.  
+     - `rd` (7–11): Destination register.  
+     - `funct3` (12–14): Encodes the specific operation within the opcode(lw,lh,lb).  
+     - `rs1` (15–19): Base address register.  
+     - `imm` (20–31): Immediate value.
 
 4. **B-Type**:  
    - **Purpose**: Facilitates branch instructions based on conditions.  
@@ -86,7 +95,7 @@ RISC-V is an open-source instruction set architecture (ISA) designed for flexibi
    - **Fields**:  
      - `opcode` (0–6): Specifies the operation type.  
      - `rd` (7–11): Destination register.  
-     - `imm[31:12]` (12–31): Upper immediate value.
+     - `imm` (12–31): Upper immediate value.
 
 6. **J-Type**:  
    - **Purpose**: Used for jump instructions (e.g., JAL).  
