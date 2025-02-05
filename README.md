@@ -42,6 +42,8 @@ RISC-V is an open-source instruction set architecture (ISA) designed for flexibi
 
 ### **Instruction Types and Field Addresses**  
 
+![Image](https://github.com/user-attachments/assets/a5f9a45e-c52f-4a10-b79e-016f87c5da3b)
+
 1. **R-Type**:  
    - **Purpose**: Register-to-register operations (e.g., addition, subtraction).  
    - **Fields**:  
