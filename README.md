@@ -110,7 +110,7 @@ RISC-V is an open-source instruction set architecture (ISA) designed for flexibi
 ---
 # RISC-V TOP 32bit RTL design:
 
-*![image](https://github.com/user-attachments/assets/9f9ececa-6b5c-49d7-bec5-0c71605de935)*
+*![Image](https://github.com/user-attachments/assets/c6ffa41a-0eb0-45bb-95a8-520e6fe3ac69)*
 
 ### **Pipeline Stages**
 
